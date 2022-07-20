@@ -1,4 +1,4 @@
-@extends('layouts.stisla.index', ['title' => 'Halaman Data Lokasi', 'page_heading' => 'List Lokasis'])
+@extends('layouts.stisla.index', ['title' => 'Halaman Data Lokasi', 'page_heading' => 'List Lokasi'])
 
 @section('content')
 @if($message = session()->get('success'))
@@ -37,10 +37,11 @@
                 <a data-id="{{ $location->id }}" data-lokasi="{{ $location->lokasi }}"  class="btn btn-sm btn-success text-white swal-edit-button" data-toggle="modal" data-target="#edit" data-placement="top" title="Ubah data">
                   <i class="fas fa-fw fa-edit"></i>
                 </a>
-                <a data-id="{{ $location->id }}" class="btn btn-sm btn-danger text-white swal-delete-button" data-toggle="modal" data-target="#delete" data-placement="top" title="Hapus data">
+                <a data-id="{{ $location->id }}" class="btn btn-sm btn-danger text-white swal-delete-button" data-toggle="tooltip" data-target="#delete" data-placement="top" title="Hapus data">
                   <i class="fas fa-fw fa-trash-alt"></i>
                 </a>
               </td>
+             
             </tr>
             @empty
             <tr>
